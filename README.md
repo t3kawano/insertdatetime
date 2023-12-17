@@ -1,10 +1,6 @@
 # insertdatetime
-written on python 3.11 spyder
-run and choose a folder to insert create time and modifed time to the top of the .md files.
-This script doesnt work subfolder recursively.
-so run the script multiple times if you need to modify files within several folders...
 
-also it force to insert srtings to the top of file without concidering whether the file already have yaml.
-
-you may need another way to marge or substitute such old yaml front matter.
-
+This Python 3.11 script, launched through Spyder, helps you easily add creation and modification times as YAML front matter to markdown files within a chosen folder. While it functions within the selected directory, it currently lacks the ability to process subfolders recursively. 
+To address files in nested folders, simply run the script on each relevant directory. 
+Please note that the script currently insert new YAML front matter without concidering whether already a YAML front matter exit or not in markdown files. 
+To handle existing configurations gracefully, consider implementing merging or substitution functionalities for future versions or use other methods.
