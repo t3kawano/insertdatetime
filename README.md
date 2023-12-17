@@ -3,7 +3,7 @@
 
 This script is tested only on Mac so far. it may works on windows.  
 This Python 3.11 script, launched through Spyder, helps you easily add creation and modification times as YAML front matter to markdown files within a chosen folder.  
-To use it, Export evernote data using offical method, and import it by importer plugin of obsidian core-plugins.　Resultant files should have created time and midifed time stamps as you can see on finder. Then, run this script and choose a folder.　　
+To use it, Export evernote data using offical method, and import it by importer plugin of obsidian core-plugins.　Resultant files should have created time and modifed time stamps as you can see on finder. Then, run this script and choose a folder.　　
 
 While it functions within the selected directory, it currently lacks the ability to process subfolders recursively. 　　
 To address files in nested folders, simply run the script on each relevant directory. 　　
