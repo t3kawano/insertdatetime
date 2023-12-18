@@ -55,8 +55,9 @@ def get_file_modified_datetime(pathtoafile):
 def insert_str_toafile(pathtoafile, string, position):
     if string is not None:
         if os.path.isfile(pathtoafile):
-            # r+ read write mode
-            with open(pathtoafile, "r+") as f:
+            # r+ read write mode, 
+            #encoding="utf-8" required. otherwide cause error
+            with open(pathtoafile, "r+", encoding="utf-8") as f:
                 # keep file contents
                 content = f.read()
                 # seek position as top of file
