@@ -70,6 +70,9 @@ def insert_str_toafile(pathtoafile, string, position):
 #==============================================
 #if this file is not impored from other modules
 #if __name__ == "__main__":
+linesep = os.linesep
+
+
 root = tk.Tk()
 root.withdraw()
 #return os.path.normpath(tk.filedialog.askdirectory())
@@ -86,10 +89,11 @@ for afile in flist:
     if os.path.isfile(pathtoafile):
         creationtime = get_file_creation_datetime(pathtoafile)
         modifiedtime = get_file_modified_datetime(pathtoafile)
-        dt = "---\n"\
-            f"creationtime: {creationtime: %Y-%m-%d %H:%M:%S.%f}\n"\
-            f"modifiedtime: {modifiedtime: %Y-%m-%d %H:%M:%S.%f}\n"\
-            "---\n"
+        dt = "---"+linesep+ \
+            f"creationtime: {creationtime: %Y-%m-%d %H:%M:%S.%f}"+linesep+ \
+            f"modifiedtime: {modifiedtime: %Y-%m-%d %H:%M:%S.%f}"+linesep+\
+            "---"+linesep
+            
         print(dt)
         #print("---")
         #print("datetime: "+str(creationtime))
@@ -117,9 +121,11 @@ str(creationtime)
 insert_str_toafile(pathtoafile, dt, 0)
 
     
-    
-    
-    
+
+os.name
+
+
+os.linesep    
     
     
     
