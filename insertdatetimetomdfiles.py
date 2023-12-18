@@ -87,22 +87,23 @@ flist = get_fileslist(directory)
 for afile in flist:
     print(afile)
     pathtoafile= os.path.join(directory, afile)
-    if os.path.isfile(pathtoafile):
-        creationtime = get_file_creation_datetime(pathtoafile)
-        modifiedtime = get_file_modified_datetime(pathtoafile)
-        dt = "---"+linesep+ \
-            f"creationtime: {creationtime: %Y-%m-%d %H:%M:%S.%f}"+linesep+ \
-            f"modifiedtime: {modifiedtime: %Y-%m-%d %H:%M:%S.%f}"+linesep+\
-            "---"+linesep
-            
-        print(dt)
-        #print("---")
-        #print("datetime: "+str(creationtime))
-        #print("datemodified: "+str(modifiedtime))
-        #print("---")
-        insert_str_toafile(pathtoafile, dt, 0)
-    else:
-        print("not a file")
+    if os.path.splitext(afile)[1] == ".md":
+        if os.path.isfile(pathtoafile):
+            creationtime = get_file_creation_datetime(pathtoafile)
+            modifiedtime = get_file_modified_datetime(pathtoafile)
+            dt = "---"+linesep+ \
+                f"creationtime: {creationtime: %Y-%m-%d %H:%M:%S.%f}"+linesep+ \
+                f"modifiedtime: {modifiedtime: %Y-%m-%d %H:%M:%S.%f}"+linesep+\
+                "---"+linesep
+                
+            print(dt)
+            #print("---")
+            #print("datetime: "+str(creationtime))
+            #print("datemodified: "+str(modifiedtime))
+            #print("---")
+            insert_str_toafile(pathtoafile, dt, 0)
+        else:
+            print("not a file")
     
 
 sys.exit()
